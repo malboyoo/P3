@@ -58,7 +58,7 @@ header {
 }
 
 main {
-  width: 100vw;
+  max-width: 100%;
 }
 
 // partie localisation
@@ -182,7 +182,11 @@ main {
       max-width: 440px;
       overflow: hidden;
       border-radius: 20px;
-      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+      transition: box-shadow 0.4s;
+      &:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.17);
+      }
       .new {
         font-style: var(--roboto);
         position: absolute;
