@@ -1,0 +1,99 @@
+@media only screen and (min-width: 992px) {
+  .current-location {
+    height: 70px;
+  }
+
+  .booking {
+    background-color: transparent;
+    position: relative;
+    height: 400px;
+    justify-content: center;
+
+    // filter image + opacity
+    &::before {
+      content: "";
+      background-image: url("../images/restaurants/spencer-davis-W_GSHCi0cR8-unsplash.jpg");
+      background-size: cover;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 400px;
+      position: absolute;
+      z-index: -1;
+    }
+    h1 {
+      margin: 0 0 40px 0;
+    }
+    p {
+      font-size: 20px;
+    }
+    .btn-explore-restaurants {
+      width: 250px;
+      margin: 40px 0;
+      padding: 15px;
+      font-size: 18px;
+    }
+  }
+  .compose-menu {
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 90%;
+      max-width: 1440px;
+      justify-content: center;
+      li {
+        max-width: 350px;
+        margin-right: 20px;
+        i {
+          margin-left: 10px;
+          margin-right: 10px;
+          font-size: 20px;
+          color: #7e7e7e;
+        }
+        p {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .restaurants {
+    h2 {
+      margin-bottom: 30px;
+    }
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      max-width: 1440px;
+      li {
+        margin: 10px;
+        max-width: 45%;
+      }
+    }
+  }
+
+  footer {
+    object {
+      width: 150px;
+      margin-bottom: 40px;
+    }
+
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+
+      li {
+        margin-left: 35px;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+header {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 60px;
+}
+header img {
+  width: 160px;
+  object-fit: contain;
+}
+
+main {
+  width: 100vw;
+}
+main .current-location {
+  display: flex;
+  height: 50px;
+  background-color: #eaeaea;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 3px 5px 0px #ccc;
+}
+main .current-location span {
+  margin: 0 20px;
+  font-weight: bold;
+}
+main .booking {
+  width: 100vw;
+  padding: 30px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  background-color: var(--gray-background);
+}
+main .booking h1 {
+  margin: 0 0 20px 0;
+}
+main .booking p {
+  font-size: 18px;
+}
+main .booking .btn-explore-restaurants {
+  width: 210px;
+  margin: 30px 0;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(#e771da, #a65cdc);
+  font-size: 16px;
+  font-family: var(--roboto);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.11);
+  transition: filter 0.2s;
+}
+main .booking .btn-explore-restaurants:hover {
+  filter: brightness(1.1);
+}
+main .compose-menu {
+  padding: 50px 20px;
+}
+main .compose-menu h2 {
+  margin-bottom: 30px;
+}
+main .compose-menu li {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0 10px 20px 10px;
+  width: 90%;
+  height: 75px;
+  background: var(--gray-background);
+  list-style: none;
+  box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1);
+}
+main .compose-menu li .num-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transform: translateX(-10px);
+}
+main .compose-menu li .num-container span {
+  font-size: 14px;
+  color: white;
+}
+main .compose-menu li i {
+  margin-left: 35px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #7e7e7e;
+}
+main .compose-menu li p {
+  font-weight: bold;
+}
+main .compose-menu li:hover {
+  background: var(--light-blue);
+}
+main .compose-menu li:hover i {
+  color: var(--primary);
+}
+
+/*# sourceMappingURL=mobile.homepage.css.map */

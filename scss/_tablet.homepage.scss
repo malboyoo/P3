@@ -1,0 +1,58 @@
+@import "mixins.scss";
+
+@media only screen and (min-width: 768px) {
+  .compose-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    align-items: center;
+    ul {
+      width: 75%;
+      li {
+        text-align: left;
+        i {
+          margin-left: 30%;
+        }
+      }
+    }
+  }
+
+  .restaurants {
+    align-items: center;
+    ul {
+      width: 75%;
+      li {
+        height: 300px;
+        margin-top: 30px;
+        max-width: none;
+        img {
+          height: 67%;
+        }
+        .card-bottom {
+          height: 33%;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    object {
+      width: 140px;
+      margin-bottom: 30px;
+    }
+    li {
+      color: white;
+      margin-bottom: 15px;
+      i {
+        margin-right: 10px;
+        width: 20px;
+      }
+      .spacing {
+        margin-left: 35px;
+      }
+    }
+  }
+}
