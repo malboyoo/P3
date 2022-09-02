@@ -56,7 +56,7 @@ main {
 
 .restaurant-image img {
   height: 260px;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -137,6 +137,7 @@ main {
 }
 .menu .plate-type {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -148,6 +149,74 @@ main {
   width: 40px;
   height: 3px;
   background: var(--tertiary);
+  margin-top: 5px;
+}
+.menu .plate-type li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  height: 70px;
+  margin-top: 10px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1);
+}
+.menu .plate-type li .plate-text {
+  min-width: 150px;
+  margin-left: 15px;
+  white-space: nowrap;
+  flex: 1;
+}
+.menu .plate-type li .plate-text h3 {
+  font-size: 18px;
+  margin-bottom: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .plate-type li .plate-text p {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .plate-type li .plate-price {
+  margin: 30px 20px 0px 10px;
+  font-weight: bold;
+}
+.menu .plate-type li .plate-like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0px;
+  height: 100%;
+  color: var(--tertiary);
+  background: var(--tertiary);
+  visibility: hidden;
+  transition: min-width 0.6s, visibility 0.6s;
+}
+.menu .plate-type li .plate-like i {
+  padding: 2px;
+  border-radius: 50%;
+  background: white;
+  font-size: 0px;
+  transition: font-size 0.5s;
+}
+.menu .plate-type li:hover .plate-like {
+  min-width: 60px;
+  visibility: visible;
+}
+.menu .plate-type li:hover .plate-like i {
+  font-size: 16px;
+  animation: 0.5s rotate-like;
+}
+@keyframes rotate-like {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=indexMenupage.css.map */
