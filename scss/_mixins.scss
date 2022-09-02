@@ -3,10 +3,17 @@
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.11);
   transition: filter 0.4s;
   transition: box-shadow 0.2s;
+  cursor: pointer;
   &:hover {
     filter: brightness(1.1);
     box-shadow: 0 10px 17px rgba(0, 0, 0, 0.2), 0 7px 7px rgba(0, 0, 0, 0.16);
   }
+}
+
+@mixin underline-bar {
+  width: 40px;
+  height: 3px;
+  background: var(--tertiary);
 }
 
 @mixin heart {
@@ -22,8 +29,6 @@
     left: 0px;
     top: 0px;
     animation: scaleDown 1s alternate;
-
-    //animation: name duration timing-function delay iteration-count direction fill-mode;
   }
   .fa-regular {
     opacity: 1;
