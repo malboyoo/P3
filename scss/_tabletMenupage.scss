@@ -1,0 +1,21 @@
+@import "mixins.scss";
+
+@media only screen and (min-width: 768px) {
+  .restaurant-image {
+    img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .menu {
+    padding: 50px 100px 0 100px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transform: translateY(-50px);
+  }
+
+  footer {
+    padding: 20px 100px;
+  }
+}

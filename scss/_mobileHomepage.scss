@@ -227,25 +227,5 @@ main {
 // footer
 
 footer {
-  width: 100vw;
-  padding: 25px;
-  background: #353535;
-  object {
-    width: 100px;
-    margin-bottom: 20px;
-  }
-  li {
-    color: white;
-    margin-bottom: 10px;
-    i {
-      margin-right: 10px;
-      width: 20px;
-    }
-    a {
-      color: white;
-      &:hover {
-        color: var(--primary);
-      }
-    }
-  }
+  @include footer;
 }

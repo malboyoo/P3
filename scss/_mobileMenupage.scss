@@ -22,6 +22,7 @@ header {
 // contenu central principal
 main {
   max-width: 100%;
+  background: var(--gray-background);
 }
 
 // image restaurant
@@ -31,6 +32,7 @@ main {
     height: 260px;
     width: 100%;
     object-fit: cover;
+    transition: height 0.4s;
   }
 }
 
@@ -64,8 +66,7 @@ main {
   }
 
   .plate-type {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 30px 0;
     display: flex;
     flex-direction: column;
     h2 {
@@ -83,18 +84,34 @@ main {
       justify-content: space-between;
       align-items: center;
       overflow: hidden;
+
       height: 70px;
       margin-top: 10px;
       border-radius: 20px;
       background: white;
       box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      &:nth-child(1) {
+        animation: delayLoading 1s 1 forwards;
+        transition: none;
+      }
+      &:nth-child(2) {
+        animation: delayLoading 1s 1 forwards;
+        animation-delay: 0.25s;
+        transition: none;
+      }
+      &:nth-child(3) {
+        animation: delayLoading 1s 1 forwards;
+        animation-delay: 0.5s;
+        transition: none;
+      }
       .plate-text {
-        min-width: 150px;
+        min-width: 120px;
         margin-left: 15px;
         white-space: nowrap;
         flex: 1;
         h3 {
-          font-size: 18px;
+          font-size: 17px;
           margin-bottom: 7px;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -118,9 +135,10 @@ main {
         color: var(--tertiary);
         background: var(--tertiary);
         visibility: hidden;
-        transition: min-width 0.6s, visibility 0.6s;
+        transition: visibility 0.6s, min-width 0.6s;
 
         i {
+          visibility: hidden;
           padding: 2px;
           border-radius: 50%;
           background: white;
@@ -132,11 +150,13 @@ main {
         .plate-like {
           min-width: 60px;
           visibility: visible;
+
           i {
             font-size: 16px;
-            animation: 0.5s rotate-like;
+            animation: 0.6s rotateLike;
+            visibility: visible;
           }
-          @keyframes rotate-like {
+          @keyframes rotateLike {
             0% {
               transform: rotate(0deg);
             }
@@ -146,6 +166,34 @@ main {
           }
         }
       }
+      @keyframes delayLoading {
+        0% {
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     }
   }
+
+  .btn-order {
+    @include btn-style;
+    width: 210px;
+    margin: 30px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(#e771da, #a65cdc);
+    font-size: 16px;
+    align-self: center;
+  }
+}
+
+// footer
+
+footer {
+  @include footer;
 }

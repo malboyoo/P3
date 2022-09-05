@@ -248,12 +248,22 @@ main {
   margin-bottom: 5px;
 }
 .restaurants ul li .card-bottom .heart {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: relative;
+  cursor: pointer;
 }
 .restaurants ul li .card-bottom .heart .fa-heart {
   font-size: 25px;
+}
+@media only screen and (min-width: 992px) {
+  .restaurants ul li .card-bottom .heart {
+    width: 30px;
+    height: 30px;
+  }
+  .restaurants ul li .card-bottom .heart .fa-heart {
+    font-size: 30px;
+  }
 }
 .restaurants ul li .card-bottom .heart .fa-solid {
   display: none;

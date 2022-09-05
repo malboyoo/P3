@@ -18,11 +18,19 @@
 }
 
 @mixin heart {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: relative;
+  cursor: pointer;
   .fa-heart {
     font-size: 25px;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 30px;
+    height: 30px;
+    .fa-heart {
+      font-size: 30px;
+    }
   }
   .fa-solid {
     display: none;
@@ -68,6 +76,30 @@
     }
     100% {
       transform: scale(0);
+    }
+  }
+}
+
+@mixin footer {
+  width: 100vw;
+  padding: 25px;
+  background: #353535;
+  object {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  li {
+    color: white;
+    margin-bottom: 10px;
+    i {
+      margin-right: 10px;
+      width: 20px;
+    }
+    a {
+      color: white;
+      &:hover {
+        color: var(--primary);
+      }
     }
   }
 }
