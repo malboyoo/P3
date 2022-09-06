@@ -34,7 +34,7 @@ a {
 }
 
 .loading-screen {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -45,7 +45,17 @@ a {
   flex-direction: column;
   align-items: center;
   padding-top: 35vh;
-  animation: loadingScreen 1 4s forwards;
+  -webkit-animation: loadingScreen 1 4s forwards;
+          animation: loadingScreen 1 4s forwards;
+}
+@-webkit-keyframes loadingScreen {
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 @keyframes loadingScreen {
   66% {
@@ -57,16 +67,24 @@ a {
   }
 }
 .loading-screen img {
-  position: sticky;
   width: 160px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-bottom: 30px;
 }
 .loading-screen i {
-  position: sticky;
   font-size: 40px;
   color: var(--primary);
-  animation: rotateSpinner 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2;
+  -webkit-animation: rotateSpinner 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2;
+          animation: rotateSpinner 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2;
+}
+@-webkit-keyframes rotateSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 @keyframes rotateSpinner {
   from {
@@ -85,7 +103,8 @@ header {
 }
 header img {
   width: 160px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 main {
@@ -114,7 +133,7 @@ main {
   align-items: center;
   text-align: center;
   background: var(--gray-background);
-  transition: background 2s, height 0.5s;
+  transition: background 2s;
 }
 .booking h1 {
   margin: 0 0 20px 0;
@@ -212,10 +231,9 @@ main {
   list-style: none;
   height: 250px;
   width: 100%;
-  border-radius: 20px;
   max-width: 440px;
-  background: white;
   overflow: hidden;
+  border-radius: 20px;
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.4s;
   cursor: pointer;
@@ -235,7 +253,8 @@ main {
   border-radius: 3px;
 }
 .restaurants ul li img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 175px;
 }
@@ -275,14 +294,16 @@ main {
   position: absolute;
   left: 0px;
   top: 0px;
-  animation: scaleDown 1s alternate;
+  -webkit-animation: scaleDown 1s alternate;
+          animation: scaleDown 1s alternate;
 }
 .restaurants ul li .card-bottom .heart .fa-regular {
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
 .restaurants ul li .card-bottom .heart:hover .fa-solid {
-  animation: scaleUp 1.5s alternate;
+  -webkit-animation: scaleUp 1.5s alternate;
+          animation: scaleUp 1.5s alternate;
   display: block;
   background-image: linear-gradient(30deg, var(--secondary), var(--primary));
   background-size: 100%;
@@ -295,6 +316,17 @@ main {
 .restaurants ul li .card-bottom .heart:hover .fa-regular {
   opacity: 0;
 }
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
 @keyframes scaleUp {
   0% {
     transform: scale(0);
@@ -304,6 +336,14 @@ main {
   }
   100% {
     transform: scale(1.03);
+  }
+}
+@-webkit-keyframes scaleDown {
+  0% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 @keyframes scaleDown {
@@ -340,25 +380,6 @@ footer li a:hover {
 }
 
 @media only screen and (min-width: 768px) {
-  .booking {
-    background-color: transparent;
-    position: relative;
-    height: 400px;
-    justify-content: center;
-  }
-  .booking::before {
-    content: "";
-    background-image: url("../images/restaurants/spencer-davis-W_GSHCi0cR8-unsplash.jpg");
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 400px;
-    position: absolute;
-    z-index: -1;
-  }
   .compose-menu {
     display: flex;
     flex-flow: column nowrap;
@@ -497,6 +518,4 @@ footer li a:hover {
   footer ul li i {
     margin-right: 5px;
   }
-}
-
-/*# sourceMappingURL=indexHomepage.css.map */
+}/*# sourceMappingURL=indexHomepage.css.map */

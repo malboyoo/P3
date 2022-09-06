@@ -1,8 +1,12 @@
 @import "mixins.scss";
 
 @media only screen and (min-width: 992px) {
+  // section menu
+
   .menu {
     padding: 50px 20px 0 20px;
+
+    // container des types de plats (row)
 
     .plate-type-container {
       display: flex;
@@ -42,6 +46,9 @@
       padding: 30px 40px 0 40px;
     }
   }
+
+  // footer
+
   footer {
     display: flex;
     flex-flow: column nowrap;

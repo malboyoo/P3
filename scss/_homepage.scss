@@ -3,6 +3,8 @@
     height: 70px;
   }
 
+  // reservez
+
   .booking {
     background-color: transparent;
     position: relative;
@@ -10,6 +12,7 @@
     justify-content: center;
 
     // filter image + opacity
+
     &::before {
       content: "";
       background-image: url("../images/restaurants/spencer-davis-W_GSHCi0cR8-unsplash.jpg");
@@ -36,6 +39,9 @@
       font-size: 18px;
     }
   }
+
+  // fonctionnement
+
   .compose-menu {
     ul {
       display: flex;
@@ -58,6 +64,8 @@
       }
     }
   }
+
+  // restaurants liste
   .restaurants {
     h2 {
       margin-bottom: 30px;
@@ -75,6 +83,8 @@
       }
     }
   }
+
+  // footer
 
   footer {
     object {

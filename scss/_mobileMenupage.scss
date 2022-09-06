@@ -20,6 +20,7 @@ header {
 }
 
 // contenu central principal
+
 main {
   max-width: 100%;
   background: var(--gray-background);
@@ -48,6 +49,8 @@ main {
   border-top-right-radius: 35px;
   transform: translateY(-35px);
 
+  // H1 restaurant et Coeur
+
   .restaurant-name {
     display: flex;
     flex-flow: row nowrap;
@@ -65,6 +68,8 @@ main {
     }
   }
 
+  // liste (entrées / plats / desserts)
+
   .plate-type {
     margin: 30px 0;
     display: flex;
@@ -78,6 +83,7 @@ main {
     }
 
     // listes des plats
+
     li {
       display: flex;
       flex-flow: row nowrap;
@@ -177,6 +183,8 @@ main {
       }
     }
   }
+
+  // bouton commander
 
   .btn-order {
     @include btn-style;
