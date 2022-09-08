@@ -219,12 +219,13 @@ main {
         padding: 0 15px;
         background: white;
         width: 100%;
-        height: 75px;
+        height: 70px;
         h3 {
           margin-bottom: 5px;
         }
         .heart {
           @include heart;
+          margin-right: 10px;
         }
       }
     }
