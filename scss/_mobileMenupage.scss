@@ -117,6 +117,11 @@ main {
         animation-delay: 0.5s;
         transition: none;
       }
+      &:nth-child(4) {
+        animation: delayLoading 1s 1 forwards;
+        animation-delay: 0.75s;
+        transition: none;
+      }
       .plate-text {
         flex-basis: 100%;
         min-width: 150px;
