@@ -6,26 +6,11 @@
   // reservez
 
   .booking {
-    background-color: transparent;
-    position: relative;
     height: 400px;
     justify-content: center;
 
     // filter image + opacity
 
-    &::before {
-      content: "";
-      background-image: url("../images/restaurants/spencer-davis-W_GSHCi0cR8-unsplash.jpg");
-      background-size: cover;
-      opacity: 0.5;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      height: 400px;
-      position: absolute;
-      z-index: -1;
-    }
     h1 {
       margin: 0 0 40px 0;
     }

@@ -341,23 +341,10 @@ footer li a:hover {
 
 @media only screen and (min-width: 768px) {
   .booking {
-    background-color: transparent;
+    background-color: var(--gray-background);
     position: relative;
     height: 400px;
     justify-content: center;
-  }
-  .booking::before {
-    content: "";
-    background-image: url("../images/restaurants/spencer-davis-W_GSHCi0cR8-unsplash.jpg");
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 400px;
-    position: absolute;
-    z-index: -1;
   }
   .compose-menu {
     display: flex;
@@ -417,23 +404,8 @@ footer li a:hover {
     height: 70px;
   }
   .booking {
-    background-color: transparent;
-    position: relative;
     height: 400px;
     justify-content: center;
-  }
-  .booking::before {
-    content: "";
-    background-image: url("../images/restaurants/spencer-davis-W_GSHCi0cR8-unsplash.jpg");
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 400px;
-    position: absolute;
-    z-index: -1;
   }
   .booking h1 {
     margin: 0 0 40px 0;
